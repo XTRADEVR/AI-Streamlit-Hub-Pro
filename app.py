@@ -11,7 +11,6 @@ st.set_page_config(
 
 # Custom CSS Styling (Streamlit High Quality Theme)
 st.markdown(
-    """
     <style>
         .main { background-color: #0b0f19; color: #f8fafc; }
         .stSidebar { background-color: #111827; }
