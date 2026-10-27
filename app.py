@@ -7,7 +7,6 @@ st.set_page_config(
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
-)
 
 # Custom CSS Styling (Streamlit High Quality Theme)
 st.markdown(
@@ -18,15 +17,12 @@ st.markdown(
         .stButton>button { width: 100%; border-radius: 8px; font-weight: 600; background: #dc2626; color: white; }
         .stButton>button:hover { background: #b91c1c; }
     </style>
-    """
     unsafe_allow_html=True
-)
 
 # Inisialisasi st.session_state untuk persistensi data agar riwayat tidak hilang
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "assistant", "content": "Halo! Selamat datang di Streamlit AI Hub Pro. Semua data obrolan dan API key disimpan di st.session_state."}
-    ]
 
 if "api_key" not in st.session_state:
     st.session_state.api_key = ""
@@ -86,7 +82,6 @@ elif selected_menu == "🌐 Situs AI Free":
         {"name": "ChatGPT", "category": "Chatbot", "url": "https://chatgpt.com", "img": "https://images.unsplash.com/photo-1677442136019-21780efad99a?w=400&auto=format&fit=crop&q=80", "desc": "Asisten AI serbaguna dari OpenAI."},
         {"name": "Google Gemini", "category": "Chatbot", "url": "https://gemini.google.com", "img": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400&auto=format&fit=crop&q=80", "desc": "AI multimodal canggih dari Google."},
         {"name": "Claude", "category": "Coding & Reasoning", "url": "https://claude.ai", "img": "https://images.unsplash.com/photo-1614680376593-902f749f7ffc?w=400&auto=format&fit=crop&q=80", "desc": "Model AI dengan penalaran dan analisis tingkat tinggi."},
-    ]
     for idx, site in enumerate(ai_sites):
         col = [col1, col2, col3][idx % 3]
         with col:
